@@ -1,0 +1,28 @@
+{
+  "name": "communitils",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
+  "dependencies": {},
+  "devDependencies": {
+    "rollup": "^4.9.1",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "clean": "rm -rf dist",
+    "clean:build": "npm run clean && npm run build",
+    "dev": "rollup -c -w",
+    "test": "ts-node test/test.ts"
+  },
+  "files": [
+    "dist"
+  ]
+}
