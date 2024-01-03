@@ -1,1 +1,2 @@
-export * from "./isNil";
+export * from './isNil';
+export * from './omit';
