@@ -1,6 +1,6 @@
 {
   "name": "communitils",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "type": "module",
   "packageManager": "npm@20.10.0",
   "main": "dist/index.cjs",
@@ -8,12 +8,12 @@
   "browser": "dist/index.umd.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc && npm run dts && rollup -c",
+    "build": "npm run dts && rollup -c",
     "clean": "rm -rf dist",
     "clean:build": "npm run clean && npm run build",
     "dev": "rollup -c -w",
-    "dts": "cat src/**/*.d.ts > src/main.d.ts",
-    "test": "vitest run",
+    "dts": "tsc && cat src/**/*.d.ts > src/main.d.ts",
+    "test": "npm run dts && vitest run",
     "test:watch": "vitest"
   },
   "devDependencies": {
