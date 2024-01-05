@@ -1,6 +1,7 @@
 {
   "name": "communitils",
-  "version": "0.3.2",
+  "description": "Breaking into open-source with a TypeScript utility package while inviting others to do the same.",
+  "version": "0.3.3",
   "type": "module",
   "packageManager": "npm@20.10.0",
   "main": "dist/index.cjs",
