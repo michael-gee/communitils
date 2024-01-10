@@ -13,7 +13,7 @@
     "clean": "rm -rf dist",
     "clean:build": "npm run clean && npm run build",
     "dev": "rollup -c -w",
-    "dts": "tsc && cat src/**/*.d.ts > src/main.d.ts",
+    "dts": "tsc && node concat.cjs",
     "test": "npm run dts && vitest run",
     "test:watch": "vitest"
   },
@@ -23,6 +23,7 @@
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-typescript": "^1.0.0",
+    "shelljs": "^0.8.5",
     "ts-node": "^10.9.2",
     "tslib": "^2.6.2",
     "typescript": "^5.3.3",
