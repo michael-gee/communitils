@@ -1,5 +1,5 @@
 {
-  "name": "communitils-src",
+  "name": "@communitils/src",
   "version": "*",
   "type": "module",
   "main": "dist/index.cjs",
@@ -10,6 +10,7 @@
     "build": "npm run dts && rollup -c",
     "dev": "rollup -c -w",
     "dts": "tsc && node concat.cjs",
+    "reinstall": "rm -rf node_modules",
     "test": "npm run dts && vitest run",
     "test:watch": "vitest"
   },
