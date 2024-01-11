@@ -1,7 +1,7 @@
 {
   "name": "communitils",
   "description": "Breaking into open-source with a TypeScript utility package while inviting others to do the same.",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "workspaces": [
     "src",
     "site"
