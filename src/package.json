@@ -1,0 +1,28 @@
+{
+  "name": "communitils-src",
+  "version": "*",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "browser": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run dts && rollup -c",
+    "dev": "rollup -c -w",
+    "dts": "tsc && node concat.cjs",
+    "test": "npm run dts && vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "rollup": "^4.9.1",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "shelljs": "^0.8.5",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
+  }
+}

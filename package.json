@@ -1,37 +1,22 @@
 {
   "name": "communitils",
   "description": "Breaking into open-source with a TypeScript utility package while inviting others to do the same.",
-  "version": "0.3.4",
-  "type": "module",
-  "packageManager": "npm@20.10.0",
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "browser": "dist/index.umd.js",
-  "types": "dist/index.d.ts",
+  "version": "0.3.5",
+  "workspaces": [
+    "src"
+  ],
   "scripts": {
-    "build": "npm run dts && rollup -c",
+    "build": "npm run build -w src",
     "clean": "rm -rf dist",
-    "clean:build": "npm run clean && npm run build",
-    "dev": "rollup -c -w",
-    "dts": "tsc && node concat.cjs",
-    "test": "npm run dts && vitest run",
-    "test:watch": "vitest"
-  },
-  "devDependencies": {
-    "rollup": "^4.9.1",
-    "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-dts": "^6.1.0",
-    "rollup-plugin-node-resolve": "^4.0.0",
-    "rollup-plugin-typescript": "^1.0.0",
-    "shelljs": "^0.8.5",
-    "ts-node": "^10.9.2",
-    "tslib": "^2.6.2",
-    "typescript": "^5.3.3",
-    "vitest": "^1.1.0"
+    "clean:build": "npm run clean && npm run build -w src",
+    "reinstall": "rm -rf node_modules && rm -rf src/node_modules && npm ci",
+    "test": "npm run test -w src",
+    "test:watch": "npm run test:watch -w src"
   },
   "files": [
     "dist"
   ],
+  "packageManager": "npm@20.10.0",
   "keywords": [
     "typescript",
     "utils",

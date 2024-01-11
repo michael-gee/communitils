@@ -7,10 +7,10 @@ import pkg from './package.json' assert { type: 'json' };
 export default [
   // browser-friendly UMD build
   {
-    input: 'src/main.ts',
+    input: 'main.ts',
     output: {
       name: 'main',
-      file: pkg.browser,
+      file: `../${pkg.browser}`,
       format: 'umd'
     },
     plugins: [
@@ -27,19 +27,19 @@ export default [
   // an array for the `output` option, where we can specify
   // `file` and `format` for each target)
   {
-    input: 'src/main.ts',
+    input: 'main.ts',
     external: [],
     plugins: [
       typescript({ tsconfig: './tsconfig.json' }) // so Rollup can convert TypeScript to JavaScript
     ],
     output: [
-      { file: pkg.main, format: 'cjs' },
-      { file: pkg.module, format: 'es' }
+      { file: `../${pkg.main}`, format: 'cjs' },
+      { file: `../${pkg.module}`, format: 'es' }
     ]
   },
   {
-    input: 'src/main.d.ts',
-    output: [{ file: 'dist/index.d.ts', format: 'es' }],
+    input: 'main.d.ts',
+    output: [{ file: '../dist/index.d.ts', format: 'es' }],
     plugins: [dts()]
   }
 ];
