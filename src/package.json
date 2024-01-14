@@ -1,16 +1,10 @@
 {
   "name": "@communitils/src",
   "version": "*",
-  "type": "module",
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "browser": "dist/index.umd.js",
-  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "npm run dts && rollup -c",
-    "dev": "rollup -c -w",
-    "dts": "tsc && node concat.cjs",
-    "reinstall": "rm -rf node_modules",
+    "build": "npm run dts && rollup -c --bundleConfigAsCjs",
+    "dev": "rollup -c --bundleConfigAsCjs -w",
+    "dts": "tsc && node ../scripts/concat.js",
     "test": "npm run dts && vitest run",
     "test:watch": "vitest"
   },
@@ -21,7 +15,6 @@
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-typescript": "^1.0.0",
-    "shelljs": "^0.8.5",
     "ts-node": "^10.9.2",
     "tslib": "^2.6.2",
     "typescript": "^5.3.3",

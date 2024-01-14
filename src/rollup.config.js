@@ -3,7 +3,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 import typescript from 'rollup-plugin-typescript';
 import { dts } from 'rollup-plugin-dts';
-import pkg from './package.json' assert { type: 'json' };
+import pkg from '../package.json' assert { type: 'json' };
 
 export default [
   // browser-friendly UMD build
@@ -12,25 +12,19 @@ export default [
     output: {
       name: 'main',
       file: `../${pkg.browser}`,
-      format: 'umd',
-      sourcemap: true
+      format: 'umd'
     },
-    plugins: [
-      terser({ compress: true, format: { comments: false } }),
-      resolve(),
-      commonjs(),
-      typescript({ tsconfig: './tsconfig.json' })
-    ]
+    plugins: [terser({ compress: true, format: { comments: false } }), resolve(), commonjs(), typescript()]
   },
 
   // CommonJS (for Node) and ES module (for bundlers) build.
   {
     input: 'main.ts',
     external: [],
-    plugins: [terser({ compress: true, format: { comments: false } }), typescript({ tsconfig: './tsconfig.json' })],
+    plugins: [terser({ compress: true, format: { comments: false } }), typescript()],
     output: [
-      { file: `../${pkg.main}`, format: 'cjs', sourcemap: true },
-      { file: `../${pkg.module}`, format: 'es', sourcemap: true }
+      { file: `../${pkg.main}`, format: 'cjs' },
+      { file: `../${pkg.module}`, format: 'es' }
     ]
   },
   {

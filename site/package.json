@@ -12,7 +12,6 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "reinstall": "rm -rf node_modules",
     "typecheck": "tsc"
   },
   "dependencies": {

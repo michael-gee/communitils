@@ -1,21 +1,28 @@
 {
   "name": "communitils",
   "description": "Breaking into open-source with a TypeScript utility package while inviting others to do the same.",
-  "version": "0.4.1",
+  "version": "0.4.2",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "browser": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
   "workspaces": [
     "src",
     "site"
   ],
   "scripts": {
     "build": "npm run build -w src",
-    "clean": "rm -rf dist",
+    "clean": "node scripts/clean.js",
     "clean:build": "npm run clean && npm run build -w src",
-    "reinstall": "rm -rf node_modules && npm run reinstall -w src -w site && npm ci",
+    "reinstall": "node scripts/reinstall.js && npm ci",
     "test": "npm run test -w src",
     "test:watch": "npm run test:watch -w src",
     "*": "************************************",
     "site:dev": "npm run start -w site",
     "site:build": "npm run build -w site"
+  },
+  "devDependencies": {
+    "shelljs": "^0.8.5"
   },
   "files": [
     "dist"
