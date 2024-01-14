@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'communitils',
-  tagline: 'Breaking into open-source with a TypeScript utility library while inviting others to do the same',
+  tagline: 'A TypeScript utility library focused on open-source contribtion',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -55,6 +55,10 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+      defaultMode: 'dark',
+      respectPrefersColorScheme: false
+    },
     navbar: {
       title: 'communitils',
       logo: {
@@ -66,9 +70,9 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial'
+          label: 'Docs'
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
+        { to: '/blog', label: 'Releases', position: 'left' },
         {
           href: 'https://github.com/michael-gee/communitils/tree/main',
           label: 'GitHub',
@@ -90,31 +94,18 @@ const config: Config = {
         },
         {
           title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus'
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus'
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus'
-            }
-          ]
+          items: []
         },
         {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog'
-            },
-            {
               label: 'GitHub',
               href: 'https://github.com/michael-gee/communitils/tree/main'
+            },
+            {
+              label: 'Releases',
+              to: '/blog'
             }
           ]
         }

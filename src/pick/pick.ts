@@ -1,3 +1,11 @@
+/**
+ * @name pick
+ * Creates a new object with the specified properties from the given object.
+ * @param object - The object from which to pick properties.
+ * @param properties - The properties to pick from the object.
+ * @returns A new object containing only the picked properties.
+ */
+
 export function pick(object: Record<string, unknown>, properties: string | string[]) {
   const picked: Record<string, unknown> = {};
 

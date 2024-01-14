@@ -1,7 +1,7 @@
 {
   "name": "communitils",
   "description": "Breaking into open-source with a TypeScript utility package while inviting others to do the same.",
-  "version": "0.3.6",
+  "version": "0.4.0",
   "workspaces": [
     "src",
     "site"
@@ -14,7 +14,7 @@
     "test": "npm run test -w src",
     "test:watch": "npm run test:watch -w src",
     "*": "************************************",
-    "site:start": "npm run start -w site",
+    "site:dev": "npm run start -w site",
     "site:build": "npm run build -w site"
   },
   "files": [
