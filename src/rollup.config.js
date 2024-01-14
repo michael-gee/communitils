@@ -12,7 +12,8 @@ export default [
     output: {
       name: 'main',
       file: `../${pkg.browser}`,
-      format: 'umd'
+      format: 'umd',
+      sourcemap: true
     },
     plugins: [
       terser({ compress: true, format: { comments: false } }),
@@ -28,8 +29,8 @@ export default [
     external: [],
     plugins: [terser({ compress: true, format: { comments: false } }), typescript({ tsconfig: './tsconfig.json' })],
     output: [
-      { file: `../${pkg.main}`, format: 'cjs' },
-      { file: `../${pkg.module}`, format: 'es' }
+      { file: `../${pkg.main}`, format: 'cjs', sourcemap: true },
+      { file: `../${pkg.module}`, format: 'es', sourcemap: true }
     ]
   },
   {

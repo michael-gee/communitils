@@ -1,6 +1,7 @@
 /**
  * @name pick
- * Creates a new object with the specified properties from the given object.
+ * @description Creates a new object with the specified properties from the given object.
+ *
  * @param object - The object from which to pick properties.
  * @param properties - The properties to pick from the object.
  * @returns A new object containing only the picked properties.
