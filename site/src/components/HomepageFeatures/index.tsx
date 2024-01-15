@@ -10,32 +10,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Open-Source Focused',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Built with TypeScript',
+    Svg: require('@site/static/img/homepage/pair-programming.svg').default,
     description: (
       <>
-        The main goal of this project is to break into open-source with a TypeScript utility library while inviting
-        everyone to do the same.
+        Useful, reusable, and reliable utility functions available in both browser and server environments. A library
+        encouraged to be utilized by all.
       </>
     )
   },
   {
-    title: 'Built with TypeScript',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Open-Source Focused',
+    Svg: require('@site/static/img/homepage/earth.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same
-        header and footer.
+        One of the main goals of this project is to encourage newcomers to break into open-source while inviting others
+        to do the same.
       </>
     )
   },
   {
     title: 'Easy to Contribute',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/homepage/version-control.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and used to get your website up and running
-        quickly.
+        Have a commonly used utility function you want to share or show off? First open-source contribution? This is the
+        place to ship it!
       </>
     )
   }

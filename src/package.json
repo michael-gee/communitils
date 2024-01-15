@@ -4,7 +4,7 @@
   "scripts": {
     "build": "npm run dts && rollup -c --bundleConfigAsCjs",
     "dev": "rollup -c --bundleConfigAsCjs -w",
-    "dts": "tsc && node ../scripts/concat.js",
+    "dts": "tsc && node ../scripts/dts.js",
     "test": "npm run dts && vitest run",
     "test:watch": "vitest"
   },

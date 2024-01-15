@@ -33,5 +33,7 @@
     "utils",
     "open-source"
   ],
+  "homepage": "https://communitils.com",
+  "bugs": "https://github.com/michael-gee/communitils/issues",
   "license": "MIT"
 }

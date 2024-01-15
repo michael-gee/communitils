@@ -39,12 +39,6 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
-        },
         theme: {
           customCss: './src/css/custom.css'
         }
@@ -62,55 +56,24 @@ const config: Config = {
     navbar: {
       title: 'communitils',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'communitils logo',
         src: 'img/logo.svg'
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Docs'
+          position: 'right',
+          label: 'Documentation'
         },
-        { to: '/blog', label: 'Releases', position: 'left' },
+        { href: 'https://github.com/michael-gee/communitils/releases', label: 'Releases', position: 'right' },
         {
-          href: 'https://github.com/michael-gee/communitils/tree/main',
-          label: 'GitHub',
-          position: 'right'
+          href: 'https://github.com/michael-gee/communitils',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository'
         }
       ]
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro'
-            }
-          ]
-        },
-        {
-          title: 'Community',
-          items: []
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/michael-gee/communitils/tree/main'
-            },
-            {
-              label: 'Releases',
-              to: '/blog'
-            }
-          ]
-        }
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`
     },
     prism: {
       theme: prismThemes.github,
