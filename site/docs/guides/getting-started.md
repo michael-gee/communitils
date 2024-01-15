@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Getting Started
 
-Work in progress
+Work in progress.
 
 ### Todo: Apply For Search
 

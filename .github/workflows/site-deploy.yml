@@ -6,7 +6,8 @@ env:
 
 on:
   push:
-    tags: ['v*']
+    branches: [main]
+    paths: [site/**]
 
 jobs:
   deploy-production:
