@@ -2,8 +2,11 @@ name: communitils test & build
 
 on:
   push:
-    branches: [main]
-    paths: [src/**]
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - '.github/workflows/test.yml'
 
 jobs:
   build:

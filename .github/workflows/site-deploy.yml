@@ -6,8 +6,11 @@ env:
 
 on:
   push:
-    branches: [main]
-    paths: [site/**]
+    branches:
+      - main
+    paths:
+      - 'site/**'
+      - '.github/workflows/site-deploy.yml'
 
 jobs:
   deploy-production:
