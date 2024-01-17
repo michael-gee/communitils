@@ -1,8 +1,8 @@
 {
   "label": "Guides",
   "position": 1,
+  "collapsed": false,
   "link": {
-    "type": "generated-index",
-    "description": "5 minutes to learn the most important Docusaurus concepts."
+    "type": "generated-index"
   }
 }

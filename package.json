@@ -1,7 +1,7 @@
 {
   "name": "communitils",
   "description": "Breaking into open-source with a TypeScript utility package while inviting others to do the same.",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "browser": "dist/index.umd.js",

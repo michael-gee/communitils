@@ -1,6 +1,7 @@
 {
   "label": "API Reference",
   "position": 2,
+  "collapsed": false,
   "link": {
     "type": "generated-index"
   }
