@@ -14,6 +14,7 @@
     "build": "npm run build -w src",
     "clean": "node scripts/clean.js",
     "clean:build": "npm run clean && npm run build -w src",
+    "prepare": "husky install",
     "reinstall": "node scripts/reinstall.js && npm ci",
     "test": "npm run test -w src",
     "test:watch": "npm run test:watch -w src",
@@ -22,11 +23,17 @@
     "site:build": "npm run build -w site"
   },
   "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "3.2.4",
     "shelljs": "^0.8.5"
   },
   "files": [
     "dist"
   ],
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
   "packageManager": "npm@20.10.0",
   "keywords": [
     "typescript",

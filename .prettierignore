@@ -1,0 +1,4 @@
+node_modules
+dist
+site/.docusaurus
+src/**/*.d.ts
