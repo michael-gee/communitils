@@ -11,12 +11,15 @@ export function pick(object: Record<string, unknown>, properties: string | strin
   const picked: Record<string, unknown> = {};
 
   if (Array.isArray(properties)) {
-    return properties.reduce((obj, key) => {
-      if (object?.hasOwnProperty(key)) {
-        obj[key] = object[key];
-      }
-      return obj;
-    }, picked as Record<string, unknown>);
+    return properties.reduce(
+      (obj, key) => {
+        if (object?.hasOwnProperty(key)) {
+          obj[key] = object[key];
+        }
+        return obj;
+      },
+      picked as Record<string, unknown>
+    );
   }
 
   if (object?.hasOwnProperty(properties)) {
