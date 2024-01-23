@@ -32,7 +32,7 @@
     "dist"
   ],
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "*.{js,ts,tsx,css,md}": "prettier --write --ignore-unknown"
   },
   "packageManager": "npm@20.10.0",
   "keywords": [
