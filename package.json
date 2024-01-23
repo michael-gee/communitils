@@ -12,12 +12,12 @@
   ],
   "scripts": {
     "build": "npm run build -w src",
+    "dev": "npm run dev -w src",
     "clean": "node scripts/clean.js",
     "clean:build": "npm run clean && npm run build -w src",
     "prepare": "husky install",
     "reinstall": "node scripts/reinstall.js && npm ci",
     "test": "npm run test -w src",
-    "test:watch": "npm run test:watch -w src",
     "*": "************************************",
     "site:dev": "npm run start -w site",
     "site:build": "npm run build -w site"
