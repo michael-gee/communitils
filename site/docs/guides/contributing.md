@@ -1,4 +1,6 @@
-# Phase 1 - Up & Running
+# Contributing
+
+## Phase 1 - Up & Running
 
 Before getting started, it is important to have a basic understanding of how to contribute to open-source. The main question to answer here is: "If I don't have write permissions to this repository, how do I contribute?"
 
@@ -29,7 +31,7 @@ Plugins:
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [MDX](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx)
 
-# Phase 2 - Development
+## Phase 2 - Development
 
 `npm run dev` runs the src/\* vitest test suite in watch mode which enables you to develop and test in parallel.
 
@@ -41,7 +43,7 @@ From there it is all code implementation and test coverage - feel free to follow
 
 [Vitest](https://vitest.dev/)
 
-# Phase 3 - Documenting
+## Phase 3 - Documenting
 
 Make your utility function known to the world! Explain why and how to use it within the `site` directory. It is a simple [Docusaurus](https://docusaurus.io/) markdown site which is deployed via Vercel to [https://www.communitils.com/](https://www.communitils.com/).
 
@@ -51,7 +53,7 @@ Github's official documentation: [Markdown Reference](https://docs.github.com/en
 
 After code is implemented, tested and documented this will lead to an approval and be considered code complete. Once code complete, it will be merged into `main` and planned for the next npm publish release.
 
-# Phase 4 - Publishing
+## Phase 4 - Publishing
 
 Before shipping to production, we must first update the [package.json](package.json) version and run `npm i` to make sure the package-lock file also gets the new version.
 

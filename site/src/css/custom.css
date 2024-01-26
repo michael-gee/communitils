@@ -47,4 +47,13 @@
     no-repeat;
 }
 
+.template-sidebar,
+a[href='/docs/template'] {
+  display: none;
+}
+
+.docs-doc-id-template .container nav {
+  display: none;
+}
+
 /* #3178c6 */
