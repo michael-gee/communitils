@@ -23,6 +23,7 @@ Github's official documentation: [Cloning a repository](https://docs.github.com/
 ### 1d Recommendations
 
 IDE: [VS Code](https://code.visualstudio.com/)
+
 Plugins:
 
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
@@ -32,12 +33,9 @@ Plugins:
 
 `npm run dev` runs the src/\* vitest test suite in watch mode which enables you to develop and test in parallel.
 
-1. Create a new directory in `src` which is named the utility function you intend to add to the project
-2. Create 3 files within the directory - `index.ts`, `[utilityName].ts`, and `[utilityName].test.ts`
-3. Add `export * from './[utilityName]';` to both `src/main.ts` and the `index.ts` file you created within your directory to ensure you code is included in the final build output.
-4. ❗ IMPORTANT ❗Do **not** edit any `*.d.ts` file - these will be automatically generated or updated for you at build time.
+To add a new util function to the project, simply run `npm run init [myUtil]` with `[myUtil]` being the name of the function you are wanting to create. This will add all the default directory and files you need to get up and running.
 
-_(TODO - add a script to automate steps 1-3 above)_
+❗ IMPORTANT ❗Do **not** edit any `*.d.ts` file - these will be automatically generated or updated for you at build time.
 
 From there it is all code implementation and test coverage - feel free to follow the existing utils as a guide on how to export and test the code. Below is a link to the tool responsible for running both the `npm run dev` & `npm run test` commands:
 

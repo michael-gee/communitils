@@ -13,20 +13,23 @@
   "scripts": {
     "build": "npm run build -w src",
     "dev": "npm run dev -w src",
-    "clean": "node scripts/clean.js",
+    "clean": "ts-node scripts/clean.ts",
     "clean:build": "npm run clean && npm run build -w src",
+    "init": "ts-node scripts/init.ts",
     "prepare": "husky install",
-    "reinstall": "node scripts/reinstall.js && npm ci",
+    "reinstall": "ts-node scripts/reinstall.ts && npm ci",
     "test": "npm run test -w src",
     "*": "************************************",
     "site:dev": "npm run start -w site",
     "site:build": "npm run build -w site"
   },
   "devDependencies": {
+    "@types/shelljs": "^0.8.15",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "prettier": "3.2.4",
-    "shelljs": "^0.8.5"
+    "shelljs": "^0.8.5",
+    "ts-node": "^10.9.2"
   },
   "files": [
     "dist"
