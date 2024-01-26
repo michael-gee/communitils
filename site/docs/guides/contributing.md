@@ -47,7 +47,7 @@ From there it is all code implementation and test coverage - feel free to follow
 
 Make your utility function known to the world! Explain why and how to use it within the `site` directory. It is a simple [Docusaurus](https://docusaurus.io/) markdown site which is deployed via Vercel to [https://www.communitils.com/](https://www.communitils.com/).
 
-Follow this [template](site/docs/template.md) on how to document your function while staying consistent with the rest of the project.
+Follow this [template](https://github.com/michael-gee/communitils/blob/main/site/docs/template.md) on how to document your function while staying consistent with the rest of the project.
 
 Github's official documentation: [Markdown Reference](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
@@ -55,12 +55,12 @@ After code is implemented, tested and documented this will lead to an approval a
 
 ## Phase 4 - Publishing
 
-Before shipping to production, we must first update the [package.json](package.json) version and run `npm i` to make sure the package-lock file also gets the new version.
+Before shipping to production, we must first update the [package.json](https://github.com/michael-gee/communitils/blob/main/package.json) version and run `npm i` to make sure the package-lock file also gets the new version.
 
 To publish code to npm and deploy the docs site to production there are 2 Github actions that run every time a `git tag` is pushed to the repository:
 
-- [npm publish](.github/workflows/npm-publish.yml)
-- [site deploy](.github/workflows/site-deploy.yml)
+- [npm publish](https://github.com/michael-gee/communitils/blob/main/.github/workflows/npm-publish.yml)
+- [site deploy](https://github.com/michael-gee/communitils/blob/main/.github/workflows/site-deploy.yml)
 
 The `git tag` and Github release name must match the exact version specified in the `package.json` file prefixed with "v".
 
