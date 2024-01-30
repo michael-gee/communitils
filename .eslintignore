@@ -2,4 +2,5 @@ node_modules
 dist
 site/.docusaurus
 site/build
+site/babel.config.js
 src/**/*.d.ts

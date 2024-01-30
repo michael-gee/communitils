@@ -18,6 +18,7 @@ export function omit(object: Record<string, unknown>, properties: string | strin
     return copyObject;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { [properties]: _, ...rest } = object;
   return rest;
 }
