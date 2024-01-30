@@ -9,11 +9,10 @@
 
 export function pick(object: Record<string, unknown>, properties: string | string[]) {
   const picked: Record<string, unknown> = {};
-
   if (Array.isArray(properties)) {
     return properties.reduce(
       (obj, key) => {
-        if (object?.hasOwnProperty(key)) {
+        if (Object.prototype.hasOwnProperty.call(object, key)) {
           obj[key] = object[key];
         }
         return obj;
@@ -22,7 +21,7 @@ export function pick(object: Record<string, unknown>, properties: string | strin
     );
   }
 
-  if (object?.hasOwnProperty(properties)) {
+  if (Object.prototype.hasOwnProperty.call(object, properties)) {
     picked[properties] = object[properties];
   }
 
