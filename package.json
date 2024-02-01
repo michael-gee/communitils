@@ -1,7 +1,7 @@
 {
   "name": "communitils",
   "description": "Breaking into open-source with a TypeScript utility package while inviting others to do the same.",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "browser": "dist/index.umd.js",
@@ -43,7 +43,10 @@
     "*.{js,ts,tsx,css,md}": "prettier --write --ignore-unknown",
     "*.{js,ts,tsx}": "eslint --fix"
   },
-  "packageManager": "npm@20.10.0",
+  "volta": {
+    "node": "20.10.0",
+    "npm": "10.2.3"
+  },
   "keywords": [
     "typescript",
     "utils",

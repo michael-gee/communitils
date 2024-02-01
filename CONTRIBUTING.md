@@ -17,6 +17,7 @@ Github's official documentation: [Cloning a repository](https://docs.github.com/
 ### 1c Install Dependencies
 
 - Confirm you have Node version `20.10.0` and NPM version `10.2.3` installed and active
+- The recommended way to install and confirm Node versions is by using [Volta](https://volta.sh/)
 - `npm ci` from the root directory of the project
 - `npm run dev` from the root directory to confirm the project is installed and runs successfully
 
