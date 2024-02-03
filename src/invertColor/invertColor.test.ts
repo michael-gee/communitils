@@ -34,6 +34,7 @@ describe('invertColor()', () => {
     it('should return black for light colors and white for dark colors', () => {
       expect(invertColor([0, 0, 0], { bw: true })).toBe('#FFFFFF');
       expect(invertColor([255, 255, 255], { bw: true })).toBe('#000000');
+      expect(invertColor([121, 52, 38], { bw: true })).toBe('#FFFFFF');
     });
   });
 });

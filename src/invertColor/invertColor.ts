@@ -2,9 +2,7 @@
  * @name invertColor
  * @description - Inverts the color by converting it to its complementary color.
  *
- * If the color is provided as a string, it should be in hexadecimal format (#RRGGBB).
- * If the color is provided as an RGB array, it should be in the format [R, G, B].
- * @param color - The color to invert.
+ * @param color - The color to invert. It can be either a string representing a hex color code (e.g., "#ffffff") or an array representing an RGB color (e.g., [255, 255, 255]).
  * @param options.bw - If true, returns black (#000000) for light colors and white (#FFFFFF) for dark colors.
  * @returns The inverted color in hexadecimal format (#RRGGBB).
  */
