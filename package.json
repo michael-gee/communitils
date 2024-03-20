@@ -13,6 +13,8 @@
   "scripts": {
     "build": "npm run build -w src",
     "dev": "npm run dev -w src",
+    "deps:check": "npx npm-check-updates",
+    "deps:upgrade": "npx npm-check-updates -u && npm install",
     "clean": "ts-node scripts/clean.ts",
     "clean:build": "npm run clean && npm run build -w src",
     "init": "ts-node scripts/init.ts",
