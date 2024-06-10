@@ -6,6 +6,6 @@
  * @returns True if the value is null or undefined, false otherwise.
  */
 
-export function isNil(value: unknown) {
+export function isNil(value: unknown): boolean {
   return value == null;
 }

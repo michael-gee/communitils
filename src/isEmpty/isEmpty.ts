@@ -6,7 +6,7 @@
  * @returns `true` if the value is empty, `false` otherwise.
  */
 
-export function isEmpty(value: string | object | unknown[] | Set<unknown> | Map<unknown, unknown>) {
+export function isEmpty(value: unknown): boolean {
   if (typeof value === 'string') {
     return value.trim() === '';
   }
@@ -19,5 +19,5 @@ export function isEmpty(value: string | object | unknown[] | Set<unknown> | Map<
     return value.size === 0;
   }
 
-  return Object.keys(value).length === 0;
+  return Object.keys(value ?? {}).length === 0;
 }
