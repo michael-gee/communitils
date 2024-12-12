@@ -14,9 +14,9 @@ jobs:
       - name: Setup Node.js environment 🟩
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - name: Install dependencies 📦
-        run: npm ci
+        run: npm i
       - name: Run build 🔧
         run: npm run build
 
@@ -28,8 +28,8 @@ jobs:
       - name: Setup Node.js environment 🟩
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - name: Install dependencies 📦
-        run: npm ci
+        run: npm i
       - name: Run tests ✅
         run: npm test
