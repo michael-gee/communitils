@@ -1,26 +1,29 @@
 {
   "name": "communitils",
   "description": "Breaking into open-source with a TypeScript utility package while inviting others to do the same.",
-  "version": "0.6.2",
+  "version": "0.7.0",
+  "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
-  "browser": "dist/index.umd.js",
   "types": "dist/index.d.ts",
-  "workspaces": [
-    "src",
-    "site"
-  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "scripts": {
-    "build": "npm run build -w src",
-    "dev": "npm run dev -w src",
+    "build": "tsup",
+    "dev": "vitest",
     "deps:check": "npx npm-check-updates",
     "deps:upgrade": "npx npm-check-updates -u && npm install",
-    "clean": "ts-node scripts/clean.ts",
+    "clean": "node --experimental-strip-types scripts/clean.ts",
     "clean:build": "npm run clean && npm run build -w src",
-    "init": "ts-node scripts/init.ts",
+    "init": "node --experimental-strip-types scripts/init.ts",
     "prepare": "husky install",
-    "reinstall": "ts-node scripts/reinstall.ts && npm ci",
-    "test": "npm run test -w src",
+    "reinstall": "node --experimental-strip-types scripts/reinstall.ts && npm ci",
+    "test": "vitest --no-watch",
     "*": "************************************",
     "site:dev": "npm run start -w site",
     "site:build": "npm run build -w site"
@@ -36,18 +39,23 @@
     "prettier": "3.2.4",
     "shelljs": "^0.8.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "tsup": "^8.3.5",
+    "typescript": "^5.3.3",
+    "vitest": "^2.1.8"
   },
   "files": [
     "dist"
+  ],
+  "workspaces": [
+    "site"
   ],
   "lint-staged": {
     "*.{js,ts,tsx,css,md}": "prettier --write --ignore-unknown",
     "*.{js,ts,tsx}": "eslint --fix"
   },
   "volta": {
-    "node": "20.10.0",
-    "npm": "10.2.3"
+    "node": "22.12.0",
+    "npm": "10.9.0"
   },
   "keywords": [
     "typescript",
