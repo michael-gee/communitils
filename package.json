@@ -1,7 +1,7 @@
 {
   "name": "communitils",
   "description": "Breaking into open-source with a TypeScript utility package while inviting others to do the same.",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -14,7 +14,7 @@
     }
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsdown",
     "dev": "vitest",
     "deps:check": "npx npm-check-updates",
     "deps:upgrade": "npx npm-check-updates -u && npm install",
@@ -39,9 +39,9 @@
     "prettier": "3.2.4",
     "shelljs": "^0.8.5",
     "ts-node": "^10.9.2",
-    "tsup": "^8.3.5",
+    "tsdown": "^0.13.4",
     "typescript": "^5.3.3",
-    "vitest": "^2.1.8"
+    "vitest": "^3.2.4"
   },
   "files": [
     "dist"
